@@ -1,2 +1,3 @@
 # idx-exchange-jp
-placeholder
+
+This repository features all work that I have done during the IDX Exchange Summer 2026 Data Analyst Internship. Work is focused around creating a pipeline for MLS transaction data.
