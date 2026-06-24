@@ -220,3 +220,5 @@ __marimo__/
 # In case local scripts accidentally ran
 CRMLSListing202602.csv
 CRMLSSold202602.csv
+
+.vscode/
