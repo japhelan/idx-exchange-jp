@@ -1,2 +1,5 @@
 csv/
 outputs/
+raw/
+processed/
+cleaned/

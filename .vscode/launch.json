@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["./data/csv", "--output_dir=./data/outputs", "--property_type_filter=True"]
+            "args": ["./data/raw", "--output_dir=./data/raw/concated", "--property_type_filter=True"]
         }
     ]
 }
