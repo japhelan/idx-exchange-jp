@@ -56,7 +56,11 @@ if args.property_type_filter:
     print(
         f"Filtered to {len(SOLD_DF)} sold records and {len(LISTINGS_DF)} listing records for Residential properties."
     )
+    SOLD_DF.to_csv(os.path.join(OUTPUT_DIR, "sold_filtered.csv"), index=False)
+    LISTINGS_DF.to_csv(os.path.join(OUTPUT_DIR, "listings_filtered.csv"), index=False)
+else:
+    SOLD_DF.to_csv(os.path.join(OUTPUT_DIR, "sold.csv"), index=False)
+    LISTINGS_DF.to_csv(os.path.join(OUTPUT_DIR, "listings.csv"), index=False)
 
-SOLD_DF.to_csv(os.path.join(OUTPUT_DIR, "sold.csv"), index=False)
-LISTINGS_DF.to_csv(os.path.join(OUTPUT_DIR, "listings.csv"), index=False)
+
 print(f"Saved aggregated data to {OUTPUT_DIR}.")
