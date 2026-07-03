@@ -29,6 +29,15 @@ def get_histogram(
     - figsize: optional figure size. If omitted for multi-column plotting, it is inferred from the grid size.
     """
     cols = [col] if isinstance(col, str) else col
+
+    def _resolve_bound(bound, column_name: str):
+        if bound is None:
+            return None
+        if isinstance(bound, dict):
+            return bound.get(column_name)
+        if isinstance(bound, pd.Series):
+            return bound.get(column_name)
+        return bound
     if not cols:
         raise ValueError("Provide at least one column name.")
     if ncols < 1:
@@ -41,11 +50,12 @@ def get_histogram(
 
     if len(cols) == 1:
         series = pd.to_numeric(df[cols[0]], errors="coerce").dropna()
-        local_clip_upper = clip_upper
+        local_clip_lower = _resolve_bound(clip_lower, cols[0])
+        local_clip_upper = _resolve_bound(clip_upper, cols[0])
         if clip_quantile is not None:
             local_clip_upper = series.quantile(clip_quantile)
-        if clip_lower is not None or local_clip_upper is not None:
-            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+        if local_clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=local_clip_lower, upper=local_clip_upper)
 
         plt.figure(figsize=figsize or (10, 6))
         sns.histplot(x=series, bins=bins, **kwargs)
@@ -77,11 +87,12 @@ def get_histogram(
 
     for i, column in enumerate(cols):
         series = pd.to_numeric(df[column], errors="coerce").dropna()
-        local_clip_upper = clip_upper
+        local_clip_lower = _resolve_bound(clip_lower, column)
+        local_clip_upper = _resolve_bound(clip_upper, column)
         if clip_quantile is not None:
             local_clip_upper = series.quantile(clip_quantile)
-        if clip_lower is not None or local_clip_upper is not None:
-            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+        if local_clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=local_clip_lower, upper=local_clip_upper)
 
         sns.histplot(x=series, bins=bins, ax=axes[i], **kwargs)
         axes[i].set_title(f"Histogram of {column}" + title_suffix)
@@ -123,6 +134,15 @@ def get_boxplot(
     - figsize: optional figure size. If omitted for multi-column plotting, it is inferred from the grid size.
     """
     cols = [col] if isinstance(col, str) else col
+
+    def _resolve_bound(bound, column_name: str):
+        if bound is None:
+            return None
+        if isinstance(bound, dict):
+            return bound.get(column_name)
+        if isinstance(bound, pd.Series):
+            return bound.get(column_name)
+        return bound
     if not cols:
         raise ValueError("Provide at least one column name.")
     if ncols < 1:
@@ -135,11 +155,12 @@ def get_boxplot(
 
     if len(cols) == 1:
         series = pd.to_numeric(df[cols[0]], errors="coerce").dropna()
-        local_clip_upper = clip_upper
+        local_clip_lower = _resolve_bound(clip_lower, cols[0])
+        local_clip_upper = _resolve_bound(clip_upper, cols[0])
         if clip_quantile is not None:
             local_clip_upper = series.quantile(clip_quantile)
-        if clip_lower is not None or local_clip_upper is not None:
-            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+        if local_clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=local_clip_lower, upper=local_clip_upper)
 
         plt.figure(figsize=figsize or (10, 6))
         sns.boxplot(x=series, **kwargs)
@@ -171,11 +192,12 @@ def get_boxplot(
 
     for i, column in enumerate(cols):
         series = pd.to_numeric(df[column], errors="coerce").dropna()
-        local_clip_upper = clip_upper
+        local_clip_lower = _resolve_bound(clip_lower, column)
+        local_clip_upper = _resolve_bound(clip_upper, column)
         if clip_quantile is not None:
             local_clip_upper = series.quantile(clip_quantile)
-        if clip_lower is not None or local_clip_upper is not None:
-            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+        if local_clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=local_clip_lower, upper=local_clip_upper)
 
         sns.boxplot(x=series, ax=axes[i], **kwargs)
         axes[i].set_title(f"Boxplot of {column}" + title_suffix)
