@@ -2,10 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# VISUALIZATION FUNCTIONS
+
 
 def get_histogram(
     df: pd.DataFrame,
-    col: str,
+    col: str | list[str],
     bins: int = 30,
     title: str | None = None,
     xlabel: str | None = None,
@@ -13,71 +15,186 @@ def get_histogram(
     clip_lower: float | None = None,
     clip_upper: float | None = None,
     clip_quantile: float | None = None,
+    ncols: int = 2,
+    figsize: tuple[float, float] | None = None,
     **kwargs,
 ):
     """
     Function for making histogram :)
+    Wraps seaborn histplot with clipping and labeling support.
+
+    Parameters:
+    - col: single column name or a list of column names.
+    - ncols: number of columns in the subplot grid when plotting multiple columns.
+    - figsize: optional figure size. If omitted for multi-column plotting, it is inferred from the grid size.
     """
-    series = pd.to_numeric(df[col], errors="coerce").dropna()
+    cols = [col] if isinstance(col, str) else col
+    if not cols:
+        raise ValueError("Provide at least one column name.")
+    if ncols < 1:
+        raise ValueError("ncols must be >= 1.")
 
-    if clip_quantile is not None:
-        if not 0 < clip_quantile <= 1:
-            raise ValueError("clip_quantile must be in (0, 1].")
-        clip_upper = series.quantile(clip_quantile)
-
-    if clip_lower is not None or clip_upper is not None:
-        series = series.clip(lower=clip_lower, upper=clip_upper)
+    if clip_quantile is not None and not 0 < clip_quantile <= 1:
+        raise ValueError("clip_quantile must be in (0, 1].")
 
     sns.set_style("whitegrid")
-    plt.figure(figsize=(10, 6))
-    sns.histplot(x=series, bins=bins, **kwargs)
+
+    if len(cols) == 1:
+        series = pd.to_numeric(df[cols[0]], errors="coerce").dropna()
+        local_clip_upper = clip_upper
+        if clip_quantile is not None:
+            local_clip_upper = series.quantile(clip_quantile)
+        if clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+
+        plt.figure(figsize=figsize or (10, 6))
+        sns.histplot(x=series, bins=bins, **kwargs)
+
+        title_suffix = ""
+        if clip_quantile is not None:
+            title_suffix = f" (clipped at p{clip_quantile * 100:.1f})"
+        elif clip_lower is not None or clip_upper is not None:
+            title_suffix = " (clipped)"
+
+        plt.title((title or f"Histogram of {cols[0]}") + title_suffix)
+        plt.xlabel(xlabel or cols[0])
+        plt.ylabel(ylabel or "Frequency")
+        plt.show()
+        return
+
+    nrows = (len(cols) + ncols - 1) // ncols
+    if figsize is None:
+        figsize = (6 * ncols, 4 * nrows)
+
+    fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize)
+    axes = axes.flatten() if hasattr(axes, "flatten") else [axes]
+
     title_suffix = ""
     if clip_quantile is not None:
         title_suffix = f" (clipped at p{clip_quantile * 100:.1f})"
     elif clip_lower is not None or clip_upper is not None:
         title_suffix = " (clipped)"
-    plt.title((title or f"Histogram of {col}") + title_suffix)
-    plt.xlabel(xlabel or col)
-    plt.ylabel(ylabel or "Frequency")
+
+    for i, column in enumerate(cols):
+        series = pd.to_numeric(df[column], errors="coerce").dropna()
+        local_clip_upper = clip_upper
+        if clip_quantile is not None:
+            local_clip_upper = series.quantile(clip_quantile)
+        if clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+
+        sns.histplot(x=series, bins=bins, ax=axes[i], **kwargs)
+        axes[i].set_title(f"Histogram of {column}" + title_suffix)
+        axes[i].set_xlabel(xlabel or column)
+        axes[i].set_ylabel(ylabel or "Frequency")
+
+    for j in range(len(cols), len(axes)):
+        axes[j].set_visible(False)
+
+    if title:
+        fig.suptitle(title)
+        fig.tight_layout(rect=(0, 0, 1, 0.97))
+    else:
+        fig.tight_layout()
+
     plt.show()
 
 
 def get_boxplot(
     df: pd.DataFrame,
-    col: str,
+    col: str | list[str],
     title: str | None = None,
     xlabel: str | None = None,
     ylabel: str | None = "Value",
     clip_lower: float | None = None,
     clip_upper: float | None = None,
     clip_quantile: float | None = None,
+    ncols: int = 2,
+    figsize: tuple[float, float] | None = None,
     **kwargs,
 ):
     """
     Function for making boxplot :)
+    Wraps seaborn boxplot with clipping and labeling support.
+
+    Parameters:
+    - col: single column name or a list of column names.
+    - ncols: number of columns in the subplot grid when plotting multiple columns.
+    - figsize: optional figure size. If omitted for multi-column plotting, it is inferred from the grid size.
     """
-    series = pd.to_numeric(df[col], errors="coerce").dropna()
+    cols = [col] if isinstance(col, str) else col
+    if not cols:
+        raise ValueError("Provide at least one column name.")
+    if ncols < 1:
+        raise ValueError("ncols must be >= 1.")
 
-    if clip_quantile is not None:
-        if not 0 < clip_quantile <= 1:
-            raise ValueError("clip_quantile must be in (0, 1].")
-        clip_upper = series.quantile(clip_quantile)
-
-    if clip_lower is not None or clip_upper is not None:
-        series = series.clip(lower=clip_lower, upper=clip_upper)
+    if clip_quantile is not None and not 0 < clip_quantile <= 1:
+        raise ValueError("clip_quantile must be in (0, 1].")
 
     sns.set_style("whitegrid")
-    plt.figure(figsize=(10, 6))
-    sns.boxplot(x=series, **kwargs)
+
+    if len(cols) == 1:
+        series = pd.to_numeric(df[cols[0]], errors="coerce").dropna()
+        local_clip_upper = clip_upper
+        if clip_quantile is not None:
+            local_clip_upper = series.quantile(clip_quantile)
+        if clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+
+        plt.figure(figsize=figsize or (10, 6))
+        sns.boxplot(x=series, **kwargs)
+
+        title_suffix = ""
+        if clip_quantile is not None:
+            title_suffix = f" (clipped at p{clip_quantile * 100:.1f})"
+        elif clip_lower is not None or clip_upper is not None:
+            title_suffix = " (clipped)"
+
+        plt.title((title or f"Boxplot of {cols[0]}") + title_suffix)
+        plt.xlabel(xlabel or cols[0])
+        plt.ylabel(ylabel or "Value")
+        plt.show()
+        return
+
+    nrows = (len(cols) + ncols - 1) // ncols
+    if figsize is None:
+        figsize = (6 * ncols, 4 * nrows)
+
+    fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize)
+    axes = axes.flatten() if hasattr(axes, "flatten") else [axes]
+
     title_suffix = ""
     if clip_quantile is not None:
         title_suffix = f" (clipped at p{clip_quantile * 100:.1f})"
     elif clip_lower is not None or clip_upper is not None:
         title_suffix = " (clipped)"
-    plt.title((title or f"Boxplot of {col}") + title_suffix)
-    plt.xlabel(xlabel or col)
-    plt.ylabel(ylabel or "Value")
+
+    for i, column in enumerate(cols):
+        series = pd.to_numeric(df[column], errors="coerce").dropna()
+        local_clip_upper = clip_upper
+        if clip_quantile is not None:
+            local_clip_upper = series.quantile(clip_quantile)
+        if clip_lower is not None or local_clip_upper is not None:
+            series = series.clip(lower=clip_lower, upper=local_clip_upper)
+
+        sns.boxplot(x=series, ax=axes[i], **kwargs)
+        axes[i].set_title(f"Boxplot of {column}" + title_suffix)
+        axes[i].set_xlabel(xlabel or column)
+        axes[i].set_ylabel(ylabel or "Value")
+
+    for j in range(len(cols), len(axes)):
+        axes[j].set_visible(False)
+
+    if title:
+        fig.suptitle(title)
+        fig.tight_layout(rect=(0, 0, 1, 0.97))
+    else:
+        fig.tight_layout()
+
     plt.show()
+
+
+# MISSING / OUTLIER FUNCTIONS (EDA)
 
 
 def get_missing_report(df, index_col=None, flag_high_missing=False, threshold=0.9):
@@ -140,7 +257,7 @@ def get_iqr_outliers(df, cols, threshold=1.5, **kwargs):
         else:
             outlier_counts[col] = None  # Column not found
 
-    print(f"Outlier Counts\n{'-'*40}")
+    print(f"Outlier Counts (Threshold: {threshold} * IQR)\n{'-'*40}")
     for col, count in outlier_counts.items():
         if count is not None:
             print(
