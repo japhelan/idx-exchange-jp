@@ -111,3 +111,41 @@ def get_missing_report(df, index_col=None, flag_high_missing=False, threshold=0.
             threshold * 100
         )
     return missing_report.sort_values(by="missing_count", ascending=False)
+
+
+def get_iqr_outliers(df, cols, threshold=1.5, **kwargs):
+    """
+    Returns a DataFrame with the count of outliers for each specified column in the input DataFrame based on the IQR method.
+
+    Parameters:
+    df (pd.DataFrame): The input DataFrame to analyze.
+    cols (list): A list of column names to check for outliers.
+    threshold (float, optional): The multiplier for the IQR to define outliers. Defaults to 1.5.
+
+    Returns:
+    pd.DataFrame: A DataFrame containing the count of outliers for each specified column.
+    """
+    outlier_counts = {}
+    outliers = pd.DataFrame()  # Initialize an empty DataFrame to store outliers
+    for col in cols:
+        if col in df.columns:
+            Q1 = df[col].quantile(0.25)
+            Q3 = df[col].quantile(0.75)
+            IQR = Q3 - Q1
+            lower_bound = Q1 - (threshold * IQR)
+            upper_bound = Q3 + (threshold * IQR)
+            outliers = df[(df[col] < lower_bound) | (df[col] > upper_bound)]
+            outlier_counts[col] = len(outliers)
+
+        else:
+            outlier_counts[col] = None  # Column not found
+
+    print(f"Outlier Counts\n{'-'*40}")
+    for col, count in outlier_counts.items():
+        if count is not None:
+            print(
+                f"{col}: {count} outliers ({(count / len(df)) * 100:.2f}% of total records)"
+            )
+        else:
+            print(f"{col}: Column not found in DataFrame")
+    return outliers
