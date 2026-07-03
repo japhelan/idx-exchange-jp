@@ -1,0 +1,60 @@
+Writing overview output to: /Users/jack/Repos/idx-exchange-jp/scripts/df_overview_output.txt
+
+
+Dataframe found with 681599 rows and 84 columns.
+
+
+Column Breakdown:
+----------------------------------------
+Number of float columns: 28
+Number of int columns: 3
+Number of object columns: 53
+Number of string columns: 0
+
+
+Checking if filtered on PropertyType...
+
+PropertyType unique values:
+['Land' 'Residential' 'ResidentialLease' 'CommercialLease'
+ 'CommercialSale' 'ManufacturedInPark' 'ResidentialIncome'
+ 'BusinessOpportunity']
+Multiple property types found. Now filtering to only include 'Residential' property types...
+Filtered rows: 681599 -> 458336
+
+
+PropertyType values after filtering:
+['Residential']
+
+
+Dataframe after filtering has 458336 rows and 84 columns.
+
+
+Missing Value Report:
+----------------------------------------
+                      column  missing_count  pct_missing  high_missing
+30    AboveGradeFinishedArea         458336        100.0          True
+62             CoveredSpaces         458336        100.0          True
+33           TaxAnnualAmount         458336        100.0          True
+51                   TaxYear         458336        100.0          True
+55  ElementarySchoolDistrict         458336        100.0          True
+..                       ...            ...          ...           ...
+8                  CloseDate              0          0.0         False
+35                 MlsStatus              0          0.0         False
+34            CountyOrParish              0          0.0         False
+31         ListingKeyNumeric              0          0.0         False
+47                 ListingId              0          0.0         False
+
+[84 rows x 4 columns]
+
+
+Numeric Distribution Summary:
+----------------------------------------
+         ClosePrice    LivingArea   DaysOnMarket
+count  4.583340e+05  4.580820e+05  458336.000000
+mean   1.186149e+06  1.898055e+03      36.903575
+std    5.989704e+06  2.516636e+04      52.982064
+min    0.000000e+00  0.000000e+00    -288.000000
+25%    5.750000e+05  1.246000e+03       8.000000
+50%    8.200000e+05  1.640000e+03      18.000000
+75%    1.300000e+06  2.217000e+03      48.000000
+max    9.895000e+08  1.702132e+07   12430.000000

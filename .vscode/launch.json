@@ -18,7 +18,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["./data/raw/concated/sold.csv"]
+            "args": ["./data/raw/concated/sold.csv", "--output-file=./scripts/df_overview_output.txt"]
         }
     ]
 }
