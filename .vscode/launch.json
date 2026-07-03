@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Concat Default Params",
+            "name": "concat test params",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["./data/raw", "--output_dir=./data/raw/concated", "--property_type_filter=True"]
+            "args": ["./data/raw", "--output_dir=./data/raw/concated", "--property_type_filter=False"]
         },
         {
             "name": "df overview test params",
@@ -18,7 +18,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["./data/raw/concated/listings.csv"]
+            "args": ["./data/raw/concated/sold.csv"]
         }
     ]
 }
