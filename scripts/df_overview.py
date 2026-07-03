@@ -30,6 +30,8 @@ from idx.config import (
     DISTRIBUTION_COLS,
 )
 
+pd.set_option("display.max_rows", None)
+
 
 class Tee:
     def __init__(self, *streams):
@@ -54,7 +56,6 @@ parser.add_argument(
 )
 
 args = parser.parse_args()
-
 input_file = args.input_file
 
 if args.output_file:
