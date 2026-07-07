@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from get_mls import sold, listings
 import ssl
-import urllib.requestj
+import urllib.request
 import certifi
 
 # Create an SSL context using certifi's certificate bundle

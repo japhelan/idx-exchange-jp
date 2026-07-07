@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "idx"
+version = "0.1.0"
+description = "Utilities and scripts for IDX Exchange data analysis"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib",
+    "pandas",
+    "seaborn",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
