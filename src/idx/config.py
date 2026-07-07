@@ -15,3 +15,4 @@ NUMERIC_ANALYSIS_FIELDS = [
     "YearBuilt",
 ]
 DISTRIBUTION_COLS = ["ClosePrice", "LivingArea", "DaysOnMarket"]
+ENRICHED_DATA_DIR = Path("./data/enriched")

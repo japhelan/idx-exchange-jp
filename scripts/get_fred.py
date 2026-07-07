@@ -45,3 +45,6 @@ print(listings_with_rates["rate_30yr_fixed"].isnull().sum())
 print(
     sold_with_rates[["CloseDate", "year_month", "ClosePrice", "rate_30yr_fixed"]].head()
 )
+
+SOLD_DF.to_csv("data/enriched/sold_with_rates.csv", index=False)
+LISTINGS_DF.to_csv("data/enriched/listings_with_rates.csv", index=False)
