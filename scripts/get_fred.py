@@ -1,6 +1,5 @@
 # Step 1 – Fetch the mortgage rate data from FRED
 import pandas as pd
-import numpy as np
 from get_mls import sold, listings
 import ssl
 import urllib.request
@@ -13,7 +12,6 @@ URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US"
 SOLD_DF = sold()
 LISTINGS_DF = listings()
 
-# Fetch the CSV with the proper SSL context
 with urllib.request.urlopen(URL, context=ssl_context) as response:
     mortgage = pd.read_csv(response, parse_dates=["observation_date"])
 mortgage.columns = ["date", "rate_30yr_fixed"]
