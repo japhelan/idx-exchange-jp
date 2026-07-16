@@ -11,6 +11,7 @@ Dropped the **following** columns:
 **1st Pass** (85 cols -> 77 cols)
 
 - "AboveGradeFinishedArea" : 100% Missing
+- "BelowGradeFinishedArea" : >99% Missing
 - "TaxAnnualAmount" : >99% Missing
 - "BuilderName" : 97% Missing
 - "ElementarySchoolDistrict" : 100% Missing
@@ -26,3 +27,9 @@ Dropped the **following** columns:
 - "ListAgentLastName" : see above
 - "ListAgentFirstName.1" : duplicate of ListAgentFirstName column (which is also being removed)
 - "ListAgentLastName.1" : see above
+
+Noted: AttachedGarageYN should be convered to binary int (currently True False object)
+
+The following type conversions were compelted to prevent impossible values (Float64 to Int64):
+
+`YearBuilt`,`StreetNumberNumeric`, `BathroomsTotalInteger`(why was it not an integer its in the name), `TaxYear`, `Stories`
