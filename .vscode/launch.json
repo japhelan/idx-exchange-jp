@@ -19,6 +19,15 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": ["./data/raw/concated/sold.csv", "--output-file=./scripts/df_overview_output.txt"]
+        },
+        {
+            "name": "geocode params",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["./data/enriched/geo_enc/address_df.csv", "--address_column=full_address", "--output_path=./data/enriched/geo_enc/address_df.csv"]
         }
+
     ]
 }

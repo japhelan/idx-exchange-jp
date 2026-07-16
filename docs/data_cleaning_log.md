@@ -27,6 +27,9 @@ Dropped the **following** columns:
 - "ListAgentLastName" : see above
 - "ListAgentFirstName.1" : duplicate of ListAgentFirstName column (which is also being removed)
 - "ListAgentLastName.1" : see above
+- "Latitude.1" : duplicate of Latitude
+- "Longitude.1" : duplicate of Longitude
+- "UnparsedAddress.1", : Also a dupe
 
 Noted: AttachedGarageYN should be convered to binary int (currently True False object)
 
