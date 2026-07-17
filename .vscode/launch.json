@@ -27,6 +27,22 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": ["./data/enriched/geo_enc/address_df.csv", "--address_column=full_address", "--output_path=./data/enriched/geo_enc/address_df.csv"]
+        },
+        {
+             "name": "Data Cleaning Test",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["./data/enriched/listings_with_rates.csv",  "--output_path=./data/cleaned/cleaned_listings.csv"]
+        },
+        {
+             "name": "Data Cleaning Test (Sold File)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["./data/enriched/sold_with_rates.csv",  "--output_path=./data/cleaned/cleaned_sold.csv"]
         }
 
     ]
