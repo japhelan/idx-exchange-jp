@@ -7,6 +7,11 @@ from geopy.geocoders import Nominatim
 import pandas as pd
 import argparse
 
+"""
+local run command (for me to copy and paste smile)
+/usr/bin/env /Users/jack/Repos/idx-exchange-jp/.venv/bin/python /Users/jack/Repos/idx-exchange-jp/scripts/bulk_geocode.py ./data/enriched/geo_enc/address_df.csv --address_column=full_address --output_path=./data/enriched/geo_enc/address_df.csv 
+"""
+
 
 def bulk_geocode(csv_path, address_column, output_path):
     # 1. Load your dataset

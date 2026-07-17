@@ -20,7 +20,7 @@ Dropped the **following** columns:
 - "MiddleOrJuniorSchool" : 91% Missing
 - "MiddleOrJuniorSchoolDistrict" : 100% Missing
 
-**2nd Pass** (77 cols -> 72 cols)
+**2nd Pass** (77 cols -> 64 cols)
 
 - ListAgentEmail" : Not important to any analysis or visualizations
 - "ListAgentFirstName" : redudant as ListAgentFullName exists
@@ -30,6 +30,16 @@ Dropped the **following** columns:
 - "Latitude.1" : duplicate of Latitude
 - "Longitude.1" : duplicate of Longitude
 - "UnparsedAddress.1", : Also a dupe
+- FireplacesTotal : 100% Missing
+- PropertyType.1 : Duplicate
+- `DaysOnMarket.1` : dupe
+- `LivingArea.1`: dupe
+- `ListPrice.1` : dupe
+- `CloseDate.1`: dupe
+- `BuyerOfficeName.1` : dupe
+- `PropertyType.1`: dupe
+- HighSchool : mostly missing and `HighSchoolDistrict` exists (and is more full)
+- ElementarySchool : 91% missing
 
 Noted: AttachedGarageYN should be convered to binary int (currently True False object)
 
