@@ -5,7 +5,6 @@ Custom sklearn pipeline component for ingesting MLS data and helper functions
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 from pathlib import Path
-from idx.config import DATA_DIR, RAW_LISTINGS_DIR, RAW_SOLD_DIR
 import os
 import ssl
 import urllib.request
