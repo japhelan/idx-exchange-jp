@@ -68,11 +68,7 @@ if __name__ == "__main__":
 
     print("\nDropping duplicate and high missing columns...")
     actual_drops = []
-    for (
-        col
-    ) in (
-        COLS_TO_DROP
-    ):  # making sure col being dropped exists to prevent error TODO: NOT WORKING WITH SOLD DATASET
+    for col in COLS_TO_DROP:
         if col in df.columns:
             actual_drops.append(col)
 
