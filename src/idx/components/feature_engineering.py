@@ -10,6 +10,8 @@ import os
 import ssl
 import urllib.request
 import certifi
+import geopandas as gpd
+from shapely.geometry import Point
 
 
 # fe helper functions
@@ -69,6 +71,38 @@ def feature_engineering(df):
     return df
 
 
+def geo_merge(
+    df, gdf, lon_col="Longitude", lat_col="Latitude", district_col="DistrictNa"
+):
+    """
+    Merges a DataFrame with a GeoDataFrame based on geographic coordinates.
+
+    Parameters:
+    df (pd.DataFrame): The DataFrame containing the data to merge.
+    gdf (gpd.GeoDataFrame): The GeoDataFrame containing the geographic data.
+    lon_col (str): The name of the longitude column in df.
+    lat_col (str): The name of the latitude column in df.
+    district_col (str): The name of the district column in gdf.
+
+    Returns:
+    pd.DataFrame: A DataFrame with the merged data, including the district information.
+    """
+
+    # Create a GeoDataFrame from the input DataFrame
+    df["geometry"] = df.apply(lambda row: Point(row[lon_col], row[lat_col]), axis=1)
+    df_gdf = gpd.GeoDataFrame(df, geometry="geometry", crs="EPSG:4326")
+
+    # Perform spatial join
+    merged_gdf = gpd.sjoin(
+        df_gdf, gdf[[district_col, "geometry"]], how="left", predicate="within"
+    )
+
+    # Drop the geometry column and return as a regular DataFrame
+    merged_df = merged_gdf.drop(columns=["geometry"])
+
+    return merged_df
+
+
 class CreateMarketMetrics(BaseEstimator, TransformerMixin):
     """
     Custom sklearn pipeline component for creating market metrics from MLS data.
@@ -85,4 +119,90 @@ class CreateMarketMetrics(BaseEstimator, TransformerMixin):
         sold_df, listings_df = X
         sold_df = feature_engineering(sold_df)
         listings_df = feature_engineering(listings_df)
+        return sold_df, listings_df
+
+
+class CleanUpTransformer(BaseEstimator, TransformerMixin):
+    """
+    Custom sklearn pipeline component for cleaning up the data.
+    Drops unnecessary columns and handles missing values.
+    at some point just roll this into the other transformer for dropping
+    """
+
+    def __init__(self):
+        pass
+
+    def fit(self, X=None, y=None):
+        return self
+
+    def transform(self, X):
+        sold_df, listings_df = X
+        # Drop unnecessary columns
+        listings_df = listings_df.drop(
+            columns=[
+                "TaxYear",
+                "BuildingAreaTotal",
+                "LotSizeDimensions",
+                "StreetNumberNumeric",
+                "MainLevelBedrooms",
+            ]
+        )
+        sold_df = sold_df.drop(
+            columns=[
+                "TaxYear",
+                "BuildingAreaTotal",
+                "LotSizeDimensions",
+                "StreetNumberNumeric",
+                "MainLevelBedrooms",
+            ]
+        )
+
+        return sold_df, listings_df
+
+
+class NullDropper(BaseEstimator, TransformerMixin):
+    """
+    Custom sklearn pipeline component for dropping rows with null values in specified columns.
+    """
+
+    def __init__(self):
+        pass
+
+    def fit(self, X=None, y=None):
+        return self
+
+    def transform(self, X):
+        sold_df, listings_df = X
+        sold_df = sold_df.dropna(
+            subset=["Latitude", "Longitude", "OriginalListPrice", "ClosePrice"]
+        )
+        listings_df = listings_df.dropna(
+            subset=["Latitude", "Longitude", "OriginalListPrice", "ClosePrice"]
+        )
+
+        return sold_df, listings_df
+
+
+class DistrictMerger(BaseEstimator, TransformerMixin):
+    """
+    Custom sklearn pipeline component for merging district information into the MLS data.
+    Merges district information based on the county or parish of the property.
+    """
+
+    def __init__(self, district_gdf):
+        if district_gdf is None:
+            district_gdf = gpd.read_file("../data/raw/district/DistrictAreas2425.shp")
+        self.district_gdf = district_gdf.to_crs(epsg=4326)
+
+    def fit(self, X=None, y=None):
+        return self
+
+    def transform(self, X):
+        sold_df, listings_df = X
+        sold_df = geo_merge(
+            sold_df, lon_col="Longitude", lat_col="Latitude", gdf=self.district_gdf
+        )
+        listings_df = geo_merge(
+            listings_df, lon_col="Longitude", lat_col="Latitude", gdf=self.district_gdf
+        )
         return sold_df, listings_df
