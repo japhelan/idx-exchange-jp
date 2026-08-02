@@ -26,6 +26,9 @@ def read_mls_dir(input_dir: Path, filter: str) -> pd.DataFrame:
         if file.suffix == ".csv":
             if filter is None or filter in file.name:
                 df_list.append(pd.read_csv(file, low_memory=False))
+    print(f"Read {len(df_list)} files from {input_dir} with filter '{filter}'")
+    print("\n")
+
     return pd.concat(df_list, ignore_index=True)
 
 
@@ -83,4 +86,9 @@ class FredMerger(BaseEstimator, TransformerMixin):
         listings_with_rates = listings_df.merge(
             self.mortgage_monthly, on="year_month", how="left"
         )
+        print(f"Merged FRED data with sold data: {sold_with_rates.shape[0]} rows")
+        print(
+            f"Merged FRED data with listings data: {listings_with_rates.shape[0]} rows"
+        )
+        print("\n")
         return sold_with_rates, listings_with_rates

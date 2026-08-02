@@ -30,7 +30,8 @@ class OutlierFlagger(BaseEstimator, TransformerMixin):
     Custom sklearn pipeline component for flagging outliers in a specified column of a DataFrame.
     """
 
-    def __init__(self, subset, multiplier=1.5, remove=False):
+    def __init__(self, subset, multiplier=1.5, remove=False, verbose=True):
+        self.verbose = verbose
         if subset is None:
             raise ValueError("subset parameter must be provided")
         self.subset = subset
@@ -42,6 +43,10 @@ class OutlierFlagger(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         sold_df, listings_df = X
+        if self.verbose:
+            print(
+                f"Flagging IQR outliers (range={self.multiplier}*IQR) in columns: {self.subset}. Pre-flag shapes: sold_df: {sold_df.shape}, listings_df: {listings_df.shape}"
+            )
         sold_df = iqr_outlier_flag(
             sold_df, subset=self.subset, multiplier=self.multiplier, remove=self.remove
         )
@@ -51,6 +56,12 @@ class OutlierFlagger(BaseEstimator, TransformerMixin):
             multiplier=self.multiplier,
             remove=self.remove,
         )
+        if self.verbose:
+            print(
+                f"Flagged IQR outliers (range={self.multiplier}*IQR) in columns: {self.subset}. Post-flag shapes: sold_df: {sold_df.shape}, listings_df: {listings_df.shape}"
+            )
+            print("\n")
+
         return sold_df, listings_df
 
 
@@ -59,7 +70,8 @@ class OutlierRemover(BaseEstimator, TransformerMixin):
     Custom sklearn pipeline component for removing outliers in a specified column of a DataFrame.
     """
 
-    def __init__(self, subset, multiplier=1.5):
+    def __init__(self, subset, multiplier=1.5, verbose=True):
+        self.verbose = verbose
         if subset is None:
             raise ValueError("subset parameter must be provided")
         self.subset = subset
@@ -70,10 +82,20 @@ class OutlierRemover(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         sold_df, listings_df = X
+        if self.verbose:
+            print(
+                f"Removing IQR outliers (range={self.multiplier}*IQR) in columns: {self.subset}. Pre-remove shapes: sold_df: {sold_df.shape}, listings_df: {listings_df.shape}"
+            )
         sold_df = iqr_outlier_flag(
             sold_df, subset=self.subset, multiplier=self.multiplier, remove=True
         )
         listings_df = iqr_outlier_flag(
             listings_df, subset=self.subset, multiplier=self.multiplier, remove=True
         )
+        if self.verbose:
+            print(
+                f"Removed IQR outliers (range={self.multiplier}*IQR) in columns: {self.subset}. Post-remove shapes: sold_df: {sold_df.shape}, listings_df: {listings_df.shape}"
+            )
+            print("\n")
+
         return sold_df, listings_df

@@ -125,3 +125,9 @@ NON_NEG_FLAG_COLS = [
     "LotSizeSquareFeet",
     "ClosePrice",  # added mostly for sold data
 ]
+
+# ================================================
+# PIPELINE SPECIFIC VARIABLES
+# ================================================
+
+DISTRICT_SHAPEFILE_PATH = Path("./data/raw/district/DistrictAreas2425.shp")
