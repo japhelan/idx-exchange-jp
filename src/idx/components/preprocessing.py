@@ -58,6 +58,10 @@ class DataCleaner(BaseEstimator, TransformerMixin):
 def flagging(df):
     # creates all flag columns for the dataframe
     df = df.copy()
+
+    df["Latitude"] = pd.to_numeric(df["Latitude"], errors="coerce")
+    df["Longitude"] = pd.to_numeric(df["Longitude"], errors="coerce")
+
     neg_check = df[NON_NEG_FLAG_COLS] < 0
     df["impossible_measurement_flag"] = neg_check.any(axis=1)
     df["impossible_year_flag"] = df["YearBuilt"] > 2026
@@ -68,12 +72,11 @@ def flagging(df):
     )
     df["null_coords_flag"] = df[["Latitude", "Longitude"]].isnull().any(axis=1)
     df["placeholder_coords_flag"] = (df["Latitude"] == 0) | (df["Longitude"] == 0)
-    df["non_cali_coords_flag"] = (
-        (df["Latitude"] > 32)
-        & (df["Latitude"] < 42)
-        & (df["Longitude"] > -124)
-        & (df["Longitude"] < -114)
-    )
+    in_cali = df["Latitude"].between(32, 42, inclusive="both") & df[
+        "Longitude"
+    ].between(-124, -114, inclusive="both")
+    df["non_cali_coords_flag"] = (~in_cali) & (~df["null_coords_flag"])
+
     return df
 
 
