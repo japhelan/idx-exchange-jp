@@ -1,0 +1,3056 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0708.1337                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='09d130143b6c989ab93bf5ef08bb10bfb72d30217549632893954da001437361' _.fcp.WorkbookFingerprinting.true...creator-author-id='09d130143b6c989ab93bf5ef08bb10bfb72d30217549632893954da001437361' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='09d130143b6c989ab93bf5ef08bb10bfb72d30217549632893954da001437361' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='09d130143b6c989ab93bf5ef08bb10bfb72d30217549632893954da001437361' original-version='18.1' source-build='2026.2.1 (20262.26.0708.1337)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.DashboardRoundedCorners.true...DashboardRoundedCorners />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='listings_clean' inline='true' name='federated.123jn6819u3ms1189rogb0yfjg55' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='listings_clean' name='textscan.1dpx3aq15dw21m0zka1bm1b1wk2z'>
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='/Users/jack/Repos/idx-exchange-jp/data/processed/listings_clean.csv' dataRefreshTime='' directory='/Users/jack/Repos/idx-exchange-jp/data/processed' filename='/var/folders/9w/27dwnd7s3plbp9xj1v9qrn5m0000gn/T/tableau-temp/18alvyc14fy0de1gbak73087d60d/listings_clean.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1dpx3aq15dw21m0zka1bm1b1wk2z' name='listings_clean.csv' table='[listings_clean#csv$]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:BL10001:no:A1:BL10001:1' header='yes' locale='en_US' separator=','>
+            <column datatype='real' name='OriginalListPrice' ordinal='0' />
+            <column datatype='integer' name='ListingKey' ordinal='1' />
+            <column datatype='date' name='CloseDate' ordinal='2' />
+            <column datatype='integer' name='ClosePrice' ordinal='3' />
+            <column datatype='real' name='Latitude' ordinal='4' />
+            <column datatype='real' name='Longitude' ordinal='5' />
+            <column datatype='string' name='UnparsedAddress' ordinal='6' />
+            <column datatype='string' name='PropertyType' ordinal='7' />
+            <column datatype='integer' name='LivingArea' ordinal='8' />
+            <column datatype='real' name='ListPrice' ordinal='9' />
+            <column datatype='integer' name='DaysOnMarket' ordinal='10' />
+            <column datatype='string' name='ListOfficeName' ordinal='11' />
+            <column datatype='string' name='BuyerOfficeName' ordinal='12' />
+            <column datatype='string' name='CoListOfficeName' ordinal='13' />
+            <column datatype='string' name='AssociationFeeFrequency' ordinal='14' />
+            <column datatype='integer' name='ListingKeyNumeric' ordinal='15' />
+            <column datatype='string' name='MLSAreaMajor' ordinal='16' />
+            <column datatype='string' name='CountyOrParish' ordinal='17' />
+            <column datatype='string' name='MlsStatus' ordinal='18' />
+            <column datatype='boolean' name='AttachedGarageYN' ordinal='19' />
+            <column datatype='real' name='ParkingTotal' ordinal='20' />
+            <column datatype='string' name='PropertySubType' ordinal='21' />
+            <column datatype='real' name='LotSizeAcres' ordinal='22' />
+            <column datatype='integer' name='YearBuilt' ordinal='23' />
+            <column datatype='string' name='ListingId' ordinal='24' />
+            <column datatype='integer' name='BathroomsTotalInteger' ordinal='25' />
+            <column datatype='string' name='City' ordinal='26' />
+            <column datatype='integer' name='BedroomsTotal' ordinal='27' />
+            <column datatype='string' name='CoBuyerAgentFirstName' ordinal='28' />
+            <column datatype='date' name='PurchaseContractDate' ordinal='29' />
+            <column datatype='date' name='ListingContractDate' ordinal='30' />
+            <column datatype='string' name='StateOrProvince' ordinal='31' />
+            <column datatype='boolean' name='FireplaceYN' ordinal='32' />
+            <column datatype='integer' name='Stories' ordinal='33' />
+            <column datatype='string' name='Levels' ordinal='34' />
+            <column datatype='real' name='LotSizeArea' ordinal='35' />
+            <column datatype='boolean' name='NewConstructionYN' ordinal='36' />
+            <column datatype='real' name='GarageSpaces' ordinal='37' />
+            <column datatype='string' name='HighSchoolDistrict' ordinal='38' />
+            <column datatype='integer' name='PostalCode' ordinal='39' />
+            <column datatype='real' name='AssociationFee' ordinal='40' />
+            <column datatype='real' name='LotSizeSquareFeet' ordinal='41' />
+            <column datatype='string' name='source_file' ordinal='42' />
+            <column datatype='real' name='BuyerAgencyCompensationType' ordinal='43' />
+            <column datatype='real' name='BuyerAgencyCompensation' ordinal='44' />
+            <column datatype='date' date-parse-format='yyyy-MM' name='year_month' ordinal='45' />
+            <column datatype='real' name='rate_30yr_fixed' ordinal='46' />
+            <column datatype='boolean' name='impossible_measurement_flag' ordinal='47' />
+            <column datatype='boolean' name='impossible_year_flag' ordinal='48' />
+            <column datatype='boolean' name='listing_after_close_flag' ordinal='49' />
+            <column datatype='boolean' name='purchase_after_close_flag' ordinal='50' />
+            <column datatype='boolean' name='negative_timeline_flag' ordinal='51' />
+            <column datatype='boolean' name='null_coords_flag' ordinal='52' />
+            <column datatype='boolean' name='placeholder_coords_flag' ordinal='53' />
+            <column datatype='boolean' name='non_cali_coords_flag' ordinal='54' />
+            <column datatype='real' name='price_ratio' ordinal='55' />
+            <column datatype='real' name='price_per_sqft' ordinal='56' />
+            <column datatype='integer' name='days_on_market' ordinal='57' />
+            <column datatype='string' name='yr_month' ordinal='58' />
+            <column datatype='integer' name='listing_to_contract_days' ordinal='59' />
+            <column datatype='integer' name='contract_to_close_days' ordinal='60' />
+            <column datatype='integer' name='index_right' ordinal='61' />
+            <column datatype='string' name='DistrictNa' ordinal='62' />
+            <column datatype='boolean' name='outlier_flag' ordinal='63' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:BL10001:no:A1:BL10001:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>226772</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OriginalListPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[OriginalListPrice]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>OriginalListPrice</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ListingKey</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ListingKey]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ListingKey</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CloseDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[CloseDate]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>CloseDate</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ClosePrice</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ClosePrice]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ClosePrice</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UnparsedAddress</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[UnparsedAddress]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>UnparsedAddress</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PropertyType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PropertyType]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>PropertyType</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LivingArea</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LivingArea]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>LivingArea</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ListPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ListPrice]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ListPrice</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DaysOnMarket</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DaysOnMarket]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>DaysOnMarket</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ListOfficeName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ListOfficeName]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ListOfficeName</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BuyerOfficeName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BuyerOfficeName]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>BuyerOfficeName</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CoListOfficeName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CoListOfficeName]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>CoListOfficeName</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AssociationFeeFrequency</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[AssociationFeeFrequency]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>AssociationFeeFrequency</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ListingKeyNumeric</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ListingKeyNumeric]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ListingKeyNumeric</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MLSAreaMajor</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[MLSAreaMajor]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>MLSAreaMajor</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CountyOrParish</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CountyOrParish]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>CountyOrParish</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MlsStatus</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[MlsStatus]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>MlsStatus</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AttachedGarageYN</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[AttachedGarageYN]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>AttachedGarageYN</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ParkingTotal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ParkingTotal]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ParkingTotal</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PropertySubType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PropertySubType]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>PropertySubType</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LotSizeAcres</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LotSizeAcres]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>LotSizeAcres</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YearBuilt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YearBuilt]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>YearBuilt</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ListingId</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ListingId]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ListingId</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BathroomsTotalInteger</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BathroomsTotalInteger]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>BathroomsTotalInteger</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BedroomsTotal</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BedroomsTotal]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>BedroomsTotal</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CoBuyerAgentFirstName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CoBuyerAgentFirstName]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>CoBuyerAgentFirstName</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PurchaseContractDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[PurchaseContractDate]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>PurchaseContractDate</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ListingContractDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[ListingContractDate]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>ListingContractDate</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StateOrProvince</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[StateOrProvince]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>StateOrProvince</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FireplaceYN</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[FireplaceYN]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>FireplaceYN</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stories</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stories]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>Stories</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Levels</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Levels]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>Levels</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LotSizeArea</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LotSizeArea]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>LotSizeArea</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NewConstructionYN</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[NewConstructionYN]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>NewConstructionYN</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GarageSpaces</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GarageSpaces]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>GarageSpaces</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HighSchoolDistrict</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[HighSchoolDistrict]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>HighSchoolDistrict</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PostalCode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PostalCode]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>PostalCode</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AssociationFee</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AssociationFee]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>AssociationFee</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LotSizeSquareFeet</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LotSizeSquareFeet]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>LotSizeSquareFeet</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_file</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[source_file]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>source_file</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BuyerAgencyCompensationType</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BuyerAgencyCompensationType]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>BuyerAgencyCompensationType</remote-alias>
+            <ordinal>43</ordinal>
+            <hidden>true</hidden>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BuyerAgencyCompensation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BuyerAgencyCompensation]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>BuyerAgencyCompensation</remote-alias>
+            <ordinal>44</ordinal>
+            <hidden>true</hidden>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_month</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[year_month]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>year_month</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rate_30yr_fixed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rate_30yr_fixed]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>rate_30yr_fixed</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>impossible_measurement_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[impossible_measurement_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>impossible_measurement_flag</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>impossible_year_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[impossible_year_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>impossible_year_flag</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listing_after_close_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[listing_after_close_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>listing_after_close_flag</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>purchase_after_close_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[purchase_after_close_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>purchase_after_close_flag</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>negative_timeline_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[negative_timeline_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>negative_timeline_flag</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>null_coords_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[null_coords_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>null_coords_flag</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>placeholder_coords_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[placeholder_coords_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>placeholder_coords_flag</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>non_cali_coords_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[non_cali_coords_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>non_cali_coords_flag</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_ratio]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>price_ratio</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_per_sqft</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_per_sqft]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>price_per_sqft</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>days_on_market</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[days_on_market]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>days_on_market</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yr_month</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[yr_month]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>yr_month</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listing_to_contract_days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[listing_to_contract_days]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>listing_to_contract_days</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contract_to_close_days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[contract_to_close_days]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>contract_to_close_days</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index_right</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index_right]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>index_right</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DistrictNa</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[DistrictNa]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>DistrictNa</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>outlier_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[outlier_flag]</local-name>
+            <parent-name>[listings_clean.csv]</parent-name>
+            <remote-alias>outlier_flag</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Association Fee Frequency' datatype='string' name='[AssociationFeeFrequency]' role='dimension' type='nominal' />
+      <column caption='Association Fee' datatype='real' name='[AssociationFee]' role='measure' type='quantitative' />
+      <column caption='Attached Garage YN' datatype='boolean' name='[AttachedGarageYN]' role='dimension' type='nominal' />
+      <column caption='Bathrooms Total Integer' datatype='integer' name='[BathroomsTotalInteger]' role='measure' type='quantitative' />
+      <column caption='Bedrooms Total' datatype='integer' name='[BedroomsTotal]' role='measure' type='quantitative' />
+      <column caption='Buyer Agency Compensation Type' datatype='real' hidden='true' name='[BuyerAgencyCompensationType]' role='dimension' type='ordinal' />
+      <column caption='Buyer Agency Compensation' datatype='real' hidden='true' name='[BuyerAgencyCompensation]' role='dimension' type='ordinal' />
+      <column caption='Buyer Office Name' datatype='string' name='[BuyerOfficeName]' role='dimension' type='nominal' />
+      <column caption='Close to List Price Ratio' datatype='real' name='[Calculation_2722217450909696]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[ClosePrice] / [OriginalListPrice]' />
+      </column>
+      <column caption='SourceMonthYear' datatype='date' datatype-customized='true' name='[Calculation_2722217451593730]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyyMM&quot;, MID([source_file], 13, 6) )) ' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Close Date' datatype='date' name='[CloseDate]' role='dimension' type='ordinal' />
+      <column caption='Close Price' datatype='integer' name='[ClosePrice]' role='measure' type='quantitative' />
+      <column caption='Co Buyer Agent First Name' datatype='string' name='[CoBuyerAgentFirstName]' role='dimension' type='nominal' />
+      <column caption='Co List Office Name' datatype='string' name='[CoListOfficeName]' role='dimension' type='nominal' />
+      <column caption='County Or Parish' datatype='string' name='[CountyOrParish]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Days On Market' datatype='integer' name='[DaysOnMarket]' role='measure' type='quantitative' />
+      <column caption='District Na' datatype='string' name='[DistrictNa]' role='dimension' type='nominal' />
+      <column caption='Fireplace YN' datatype='boolean' name='[FireplaceYN]' role='dimension' type='nominal' />
+      <column caption='Garage Spaces' datatype='real' name='[GarageSpaces]' role='measure' type='quantitative' />
+      <column caption='High School District' datatype='string' name='[HighSchoolDistrict]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='List Office Name' datatype='string' name='[ListOfficeName]' role='dimension' type='nominal' />
+      <column caption='List Price' datatype='real' name='[ListPrice]' role='measure' type='quantitative' />
+      <column caption='Listing Contract Date' datatype='date' name='[ListingContractDate]' role='dimension' type='ordinal' />
+      <column caption='Listing Id' datatype='string' name='[ListingId]' role='dimension' type='nominal' />
+      <column caption='Listing Key Numeric' datatype='integer' name='[ListingKeyNumeric]' role='measure' type='quantitative' />
+      <column caption='Listing Key' datatype='integer' name='[ListingKey]' role='dimension' type='ordinal' />
+      <column caption='Living Area' datatype='integer' name='[LivingArea]' role='measure' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Lot Size Acres' datatype='real' name='[LotSizeAcres]' role='measure' type='quantitative' />
+      <column caption='Lot Size Area' datatype='real' name='[LotSizeArea]' role='measure' type='quantitative' />
+      <column caption='Lot Size Square Feet' datatype='real' name='[LotSizeSquareFeet]' role='measure' type='quantitative' />
+      <column caption='MLS Area Major' datatype='string' name='[MLSAreaMajor]' role='dimension' type='nominal' />
+      <column caption='Mls Status' datatype='string' name='[MlsStatus]' role='dimension' type='nominal' />
+      <column caption='New Construction YN' datatype='boolean' name='[NewConstructionYN]' role='dimension' type='nominal' />
+      <column caption='Original List Price' datatype='real' name='[OriginalListPrice]' role='measure' type='quantitative' />
+      <column caption='Parking Total' datatype='real' name='[ParkingTotal]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+      <column caption='Property Type' datatype='string' name='[PropertyType]' role='dimension' type='nominal' />
+      <column caption='Purchase Contract Date' datatype='date' name='[PurchaseContractDate]' role='dimension' type='ordinal' />
+      <column caption='State Or Province' datatype='string' name='[StateOrProvince]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Unparsed Address' datatype='string' name='[UnparsedAddress]' role='dimension' type='nominal' />
+      <column caption='Year Built' datatype='integer' name='[YearBuilt]' role='dimension' type='quantitative' />
+      <column caption='listings_clean.csv' datatype='table' name='[__tableau_internal_object_id__].[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]' role='measure' type='quantitative' />
+      <column caption='Contract To Close Days' datatype='integer' name='[contract_to_close_days]' role='measure' type='quantitative' />
+      <column caption='Days On Market1' datatype='integer' name='[days_on_market]' role='measure' type='quantitative' />
+      <column caption='Impossible Measurement Flag' datatype='boolean' name='[impossible_measurement_flag]' role='dimension' type='nominal' />
+      <column caption='Impossible Year Flag' datatype='boolean' name='[impossible_year_flag]' role='dimension' type='nominal' />
+      <column caption='Index Right' datatype='integer' name='[index_right]' role='measure' type='quantitative' />
+      <column caption='Listing After Close Flag' datatype='boolean' name='[listing_after_close_flag]' role='dimension' type='nominal' />
+      <column caption='Listing To Contract Days' datatype='integer' name='[listing_to_contract_days]' role='measure' type='quantitative' />
+      <column caption='Negative Timeline Flag' datatype='boolean' name='[negative_timeline_flag]' role='dimension' type='nominal' />
+      <column caption='Non Cali Coords Flag' datatype='boolean' name='[non_cali_coords_flag]' role='dimension' type='nominal' />
+      <column caption='Null Coords Flag' datatype='boolean' name='[null_coords_flag]' role='dimension' type='nominal' />
+      <column caption='Outlier Flag' datatype='boolean' name='[outlier_flag]' role='dimension' type='nominal' />
+      <column caption='Placeholder Coords Flag' datatype='boolean' name='[placeholder_coords_flag]' role='dimension' type='nominal' />
+      <column caption='Price Per Sqft' datatype='real' name='[price_per_sqft]' role='measure' type='quantitative' />
+      <column caption='Price Ratio' datatype='real' name='[price_ratio]' role='measure' type='quantitative' />
+      <column caption='Purchase After Close Flag' datatype='boolean' name='[purchase_after_close_flag]' role='dimension' type='nominal' />
+      <column caption='Rate 30Yr Fixed' datatype='real' name='[rate_30yr_fixed]' role='measure' type='quantitative' />
+      <column caption='Source File' datatype='string' name='[source_file]' role='dimension' type='nominal' />
+      <column caption='Year Month' datatype='date' datatype-customized='true' name='[year_month]' role='dimension' type='ordinal' />
+      <column caption='Yr Month' datatype='string' name='[yr_month]' role='dimension' type='nominal' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/9w/27dwnd7s3plbp9xj1v9qrn5m0000gn/T/tableau-temp/#TableauTemp_1hqh7t905ynh14148f5jy1h2jw0d.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/18/2026 07:46:19 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>OriginalListPrice</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[OriginalListPrice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OriginalListPrice</remote-alias>
+              <ordinal>0</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9187</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ListingKey</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ListingKey]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ListingKey</remote-alias>
+              <ordinal>1</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>531493</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CloseDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[CloseDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CloseDate</remote-alias>
+              <ordinal>2</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2625</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ClosePrice</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ClosePrice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ClosePrice</remote-alias>
+              <ordinal>3</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5766</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>4</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>456041</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>5</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>466822</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>UnparsedAddress</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[UnparsedAddress]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>UnparsedAddress</remote-alias>
+              <ordinal>6</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>509386</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PropertyType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PropertyType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PropertyType</remote-alias>
+              <ordinal>7</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LivingArea</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[LivingArea]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LivingArea</remote-alias>
+              <ordinal>8</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12613</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ListPrice</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ListPrice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ListPrice</remote-alias>
+              <ordinal>9</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9687</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DaysOnMarket</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[DaysOnMarket]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DaysOnMarket</remote-alias>
+              <ordinal>10</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>492</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ListOfficeName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ListOfficeName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ListOfficeName</remote-alias>
+              <ordinal>11</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20837</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BuyerOfficeName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BuyerOfficeName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BuyerOfficeName</remote-alias>
+              <ordinal>12</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12222</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CoListOfficeName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CoListOfficeName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CoListOfficeName</remote-alias>
+              <ordinal>13</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7448</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AssociationFeeFrequency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AssociationFeeFrequency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AssociationFeeFrequency</remote-alias>
+              <ordinal>14</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ListingKeyNumeric</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ListingKeyNumeric]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ListingKeyNumeric</remote-alias>
+              <ordinal>15</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>531493</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MLSAreaMajor</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MLSAreaMajor]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MLSAreaMajor</remote-alias>
+              <ordinal>16</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2511</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CountyOrParish</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CountyOrParish]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CountyOrParish</remote-alias>
+              <ordinal>17</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>105</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MlsStatus</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MlsStatus]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MlsStatus</remote-alias>
+              <ordinal>18</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AttachedGarageYN</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[AttachedGarageYN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AttachedGarageYN</remote-alias>
+              <ordinal>19</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ParkingTotal</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ParkingTotal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ParkingTotal</remote-alias>
+              <ordinal>20</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>82</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PropertySubType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PropertySubType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PropertySubType</remote-alias>
+              <ordinal>21</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LotSizeAcres</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LotSizeAcres]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LotSizeAcres</remote-alias>
+              <ordinal>22</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14507</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>YearBuilt</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[YearBuilt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>YearBuilt</remote-alias>
+              <ordinal>23</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>218</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ListingId</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ListingId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ListingId</remote-alias>
+              <ordinal>24</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>531493</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BathroomsTotalInteger</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BathroomsTotalInteger]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BathroomsTotalInteger</remote-alias>
+              <ordinal>25</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>26</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1656</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BedroomsTotal</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BedroomsTotal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BedroomsTotal</remote-alias>
+              <ordinal>27</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CoBuyerAgentFirstName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CoBuyerAgentFirstName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CoBuyerAgentFirstName</remote-alias>
+              <ordinal>28</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11839</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PurchaseContractDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[PurchaseContractDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PurchaseContractDate</remote-alias>
+              <ordinal>29</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3525</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ListingContractDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[ListingContractDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ListingContractDate</remote-alias>
+              <ordinal>30</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2323</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>StateOrProvince</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[StateOrProvince]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StateOrProvince</remote-alias>
+              <ordinal>31</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FireplaceYN</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[FireplaceYN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FireplaceYN</remote-alias>
+              <ordinal>32</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Stories</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Stories]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Stories</remote-alias>
+              <ordinal>33</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Levels</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Levels]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Levels</remote-alias>
+              <ordinal>34</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LotSizeArea</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LotSizeArea]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LotSizeArea</remote-alias>
+              <ordinal>35</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>36888</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NewConstructionYN</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[NewConstructionYN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NewConstructionYN</remote-alias>
+              <ordinal>36</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GarageSpaces</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[GarageSpaces]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GarageSpaces</remote-alias>
+              <ordinal>37</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HighSchoolDistrict</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HighSchoolDistrict]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>HighSchoolDistrict</remote-alias>
+              <ordinal>38</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>821</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PostalCode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PostalCode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PostalCode</remote-alias>
+              <ordinal>39</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3400</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AssociationFee</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[AssociationFee]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AssociationFee</remote-alias>
+              <ordinal>40</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3795</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LotSizeSquareFeet</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LotSizeSquareFeet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LotSizeSquareFeet</remote-alias>
+              <ordinal>41</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37157</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>source_file</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[source_file]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>source_file</remote-alias>
+              <ordinal>42</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year_month</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[year_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year_month</remote-alias>
+              <ordinal>43</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rate_30yr_fixed</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rate_30yr_fixed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rate_30yr_fixed</remote-alias>
+              <ordinal>44</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>impossible_measurement_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[impossible_measurement_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>impossible_measurement_flag</remote-alias>
+              <ordinal>45</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>impossible_year_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[impossible_year_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>impossible_year_flag</remote-alias>
+              <ordinal>46</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>listing_after_close_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[listing_after_close_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>listing_after_close_flag</remote-alias>
+              <ordinal>47</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>purchase_after_close_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[purchase_after_close_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>purchase_after_close_flag</remote-alias>
+              <ordinal>48</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>negative_timeline_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[negative_timeline_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>negative_timeline_flag</remote-alias>
+              <ordinal>49</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>null_coords_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[null_coords_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>null_coords_flag</remote-alias>
+              <ordinal>50</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>placeholder_coords_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[placeholder_coords_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>placeholder_coords_flag</remote-alias>
+              <ordinal>51</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>non_cali_coords_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[non_cali_coords_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>non_cali_coords_flag</remote-alias>
+              <ordinal>52</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_ratio</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_ratio]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_ratio</remote-alias>
+              <ordinal>53</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37435</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_per_sqft</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_per_sqft]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_per_sqft</remote-alias>
+              <ordinal>54</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102375</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>days_on_market</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[days_on_market]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>days_on_market</remote-alias>
+              <ordinal>55</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>560</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>yr_month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[yr_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>yr_month</remote-alias>
+              <ordinal>56</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>listing_to_contract_days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[listing_to_contract_days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>listing_to_contract_days</remote-alias>
+              <ordinal>57</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>508</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contract_to_close_days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[contract_to_close_days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>contract_to_close_days</remote-alias>
+              <ordinal>58</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>266</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>index_right</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[index_right]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>index_right</remote-alias>
+              <ordinal>59</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1274</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DistrictNa</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DistrictNa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DistrictNa</remote-alias>
+              <ordinal>60</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1271</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>outlier_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[outlier_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>outlier_flag</remote-alias>
+              <ordinal>61</ordinal>
+              <family>listings_clean.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='OriginalListPrice' />
+        <field-sort-custom-order field='ListingKey' />
+        <field-sort-custom-order field='CloseDate' />
+        <field-sort-custom-order field='ClosePrice' />
+        <field-sort-custom-order field='Latitude' />
+        <field-sort-custom-order field='Longitude' />
+        <field-sort-custom-order field='UnparsedAddress' />
+        <field-sort-custom-order field='PropertyType' />
+        <field-sort-custom-order field='LivingArea' />
+        <field-sort-custom-order field='ListPrice' />
+        <field-sort-custom-order field='DaysOnMarket' />
+        <field-sort-custom-order field='ListOfficeName' />
+        <field-sort-custom-order field='BuyerOfficeName' />
+        <field-sort-custom-order field='CoListOfficeName' />
+        <field-sort-custom-order field='AssociationFeeFrequency' />
+        <field-sort-custom-order field='ListingKeyNumeric' />
+        <field-sort-custom-order field='MLSAreaMajor' />
+        <field-sort-custom-order field='CountyOrParish' />
+        <field-sort-custom-order field='MlsStatus' />
+        <field-sort-custom-order field='AttachedGarageYN' />
+        <field-sort-custom-order field='ParkingTotal' />
+        <field-sort-custom-order field='PropertySubType' />
+        <field-sort-custom-order field='LotSizeAcres' />
+        <field-sort-custom-order field='YearBuilt' />
+        <field-sort-custom-order field='ListingId' />
+        <field-sort-custom-order field='BathroomsTotalInteger' />
+        <field-sort-custom-order field='City' />
+        <field-sort-custom-order field='BedroomsTotal' />
+        <field-sort-custom-order field='CoBuyerAgentFirstName' />
+        <field-sort-custom-order field='PurchaseContractDate' />
+        <field-sort-custom-order field='ListingContractDate' />
+        <field-sort-custom-order field='StateOrProvince' />
+        <field-sort-custom-order field='FireplaceYN' />
+        <field-sort-custom-order field='Stories' />
+        <field-sort-custom-order field='Levels' />
+        <field-sort-custom-order field='LotSizeArea' />
+        <field-sort-custom-order field='NewConstructionYN' />
+        <field-sort-custom-order field='GarageSpaces' />
+        <field-sort-custom-order field='HighSchoolDistrict' />
+        <field-sort-custom-order field='PostalCode' />
+        <field-sort-custom-order field='AssociationFee' />
+        <field-sort-custom-order field='LotSizeSquareFeet' />
+        <field-sort-custom-order field='source_file' />
+        <field-sort-custom-order field='Calculation_2722217451593730' />
+        <field-sort-custom-order field='year_month' />
+        <field-sort-custom-order field='rate_30yr_fixed' />
+        <field-sort-custom-order field='impossible_measurement_flag' />
+        <field-sort-custom-order field='impossible_year_flag' />
+        <field-sort-custom-order field='listing_after_close_flag' />
+        <field-sort-custom-order field='purchase_after_close_flag' />
+        <field-sort-custom-order field='negative_timeline_flag' />
+        <field-sort-custom-order field='null_coords_flag' />
+        <field-sort-custom-order field='placeholder_coords_flag' />
+        <field-sort-custom-order field='non_cali_coords_flag' />
+        <field-sort-custom-order field='price_ratio' />
+        <field-sort-custom-order field='price_per_sqft' />
+        <field-sort-custom-order field='days_on_market' />
+        <field-sort-custom-order field='yr_month' />
+        <field-sort-custom-order field='listing_to_contract_days' />
+        <field-sort-custom-order field='contract_to_close_days' />
+        <field-sort-custom-order field='index_right' />
+        <field-sort-custom-order field='DistrictNa' />
+        <field-sort-custom-order field='outlier_flag' />
+        <field-sort-custom-order field='BuyerAgencyCompensationType' />
+        <field-sort-custom-order field='BuyerAgencyCompensation' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field='Calculation_2722217450909696' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='listings_clean.csv' id='listings_clean.csv_D866A8682A1F4E4F9BD3837D0BA998E1'>
+            <properties context=''>
+              <relation connection='textscan.1dpx3aq15dw21m0zka1bm1b1wk2z' name='listings_clean.csv' table='[listings_clean#csv$]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:BL10001:no:A1:BL10001:1' header='yes' locale='en_US' separator=','>
+                  <column datatype='real' name='OriginalListPrice' ordinal='0' />
+                  <column datatype='integer' name='ListingKey' ordinal='1' />
+                  <column datatype='date' name='CloseDate' ordinal='2' />
+                  <column datatype='integer' name='ClosePrice' ordinal='3' />
+                  <column datatype='real' name='Latitude' ordinal='4' />
+                  <column datatype='real' name='Longitude' ordinal='5' />
+                  <column datatype='string' name='UnparsedAddress' ordinal='6' />
+                  <column datatype='string' name='PropertyType' ordinal='7' />
+                  <column datatype='integer' name='LivingArea' ordinal='8' />
+                  <column datatype='real' name='ListPrice' ordinal='9' />
+                  <column datatype='integer' name='DaysOnMarket' ordinal='10' />
+                  <column datatype='string' name='ListOfficeName' ordinal='11' />
+                  <column datatype='string' name='BuyerOfficeName' ordinal='12' />
+                  <column datatype='string' name='CoListOfficeName' ordinal='13' />
+                  <column datatype='string' name='AssociationFeeFrequency' ordinal='14' />
+                  <column datatype='integer' name='ListingKeyNumeric' ordinal='15' />
+                  <column datatype='string' name='MLSAreaMajor' ordinal='16' />
+                  <column datatype='string' name='CountyOrParish' ordinal='17' />
+                  <column datatype='string' name='MlsStatus' ordinal='18' />
+                  <column datatype='boolean' name='AttachedGarageYN' ordinal='19' />
+                  <column datatype='real' name='ParkingTotal' ordinal='20' />
+                  <column datatype='string' name='PropertySubType' ordinal='21' />
+                  <column datatype='real' name='LotSizeAcres' ordinal='22' />
+                  <column datatype='integer' name='YearBuilt' ordinal='23' />
+                  <column datatype='string' name='ListingId' ordinal='24' />
+                  <column datatype='integer' name='BathroomsTotalInteger' ordinal='25' />
+                  <column datatype='string' name='City' ordinal='26' />
+                  <column datatype='integer' name='BedroomsTotal' ordinal='27' />
+                  <column datatype='string' name='CoBuyerAgentFirstName' ordinal='28' />
+                  <column datatype='date' name='PurchaseContractDate' ordinal='29' />
+                  <column datatype='date' name='ListingContractDate' ordinal='30' />
+                  <column datatype='string' name='StateOrProvince' ordinal='31' />
+                  <column datatype='boolean' name='FireplaceYN' ordinal='32' />
+                  <column datatype='integer' name='Stories' ordinal='33' />
+                  <column datatype='string' name='Levels' ordinal='34' />
+                  <column datatype='real' name='LotSizeArea' ordinal='35' />
+                  <column datatype='boolean' name='NewConstructionYN' ordinal='36' />
+                  <column datatype='real' name='GarageSpaces' ordinal='37' />
+                  <column datatype='string' name='HighSchoolDistrict' ordinal='38' />
+                  <column datatype='integer' name='PostalCode' ordinal='39' />
+                  <column datatype='real' name='AssociationFee' ordinal='40' />
+                  <column datatype='real' name='LotSizeSquareFeet' ordinal='41' />
+                  <column datatype='string' name='source_file' ordinal='42' />
+                  <column datatype='real' name='BuyerAgencyCompensationType' ordinal='43' />
+                  <column datatype='real' name='BuyerAgencyCompensation' ordinal='44' />
+                  <column datatype='date' date-parse-format='yyyy-MM' name='year_month' ordinal='45' />
+                  <column datatype='real' name='rate_30yr_fixed' ordinal='46' />
+                  <column datatype='boolean' name='impossible_measurement_flag' ordinal='47' />
+                  <column datatype='boolean' name='impossible_year_flag' ordinal='48' />
+                  <column datatype='boolean' name='listing_after_close_flag' ordinal='49' />
+                  <column datatype='boolean' name='purchase_after_close_flag' ordinal='50' />
+                  <column datatype='boolean' name='negative_timeline_flag' ordinal='51' />
+                  <column datatype='boolean' name='null_coords_flag' ordinal='52' />
+                  <column datatype='boolean' name='placeholder_coords_flag' ordinal='53' />
+                  <column datatype='boolean' name='non_cali_coords_flag' ordinal='54' />
+                  <column datatype='real' name='price_ratio' ordinal='55' />
+                  <column datatype='real' name='price_per_sqft' ordinal='56' />
+                  <column datatype='integer' name='days_on_market' ordinal='57' />
+                  <column datatype='string' name='yr_month' ordinal='58' />
+                  <column datatype='integer' name='listing_to_contract_days' ordinal='59' />
+                  <column datatype='integer' name='contract_to_close_days' ordinal='60' />
+                  <column datatype='integer' name='index_right' ordinal='61' />
+                  <column datatype='string' name='DistrictNa' ordinal='62' />
+                  <column datatype='boolean' name='outlier_flag' ordinal='63' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.123jn6819u3ms1189rogb0yfjg55'>
+      <datasources>
+        <datasource caption='listings_clean' name='federated.123jn6819u3ms1189rogb0yfjg55' />
+      </datasources>
+      <datasource-dependencies datasource='federated.123jn6819u3ms1189rogb0yfjg55'>
+        <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+        <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+        <column-instance column='[PostalCode]' derivation='None' name='[none:PostalCode:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[PropertySubType]' derivation='None' name='[none:PropertySubType:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]'>
+        <groupfilter function='level-members' level='[none:PostalCode:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]' />
+      </filter>
+      <filter class='categorical' column='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='%null%' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Apartment&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;BoatSlip&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Cabin&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Condominium&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;CoOwnership&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;DeededParking&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Duplex&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Loft&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;ManufacturedHome&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;ManufacturedOnLand&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;MixedUse&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;MobileHome&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;OwnYourOwn&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Quadruplex&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;RoomingHouse&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;SingleFamilyResidence&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;StockCooperative&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Studio&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Timeshare&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Townhouse&quot;' />
+          <groupfilter function='member' level='[none:PropertySubType:nk]' member='&quot;Triplex&quot;' />
+        </groupfilter>
+        <target field='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Average close-to-original-list price ratio'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tahoma' fontsize='10'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listings_clean' name='federated.123jn6819u3ms1189rogb0yfjg55' />
+          </datasources>
+          <datasource-dependencies datasource='federated.123jn6819u3ms1189rogb0yfjg55'>
+            <column caption='Close to List Price Ratio' datatype='real' name='[Calculation_2722217450909696]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[ClosePrice] / [OriginalListPrice]' />
+            </column>
+            <column caption='Close Price' datatype='integer' name='[ClosePrice]' role='measure' type='quantitative' />
+            <column caption='Original List Price' datatype='real' name='[OriginalListPrice]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2722217450909696]' derivation='Avg' name='[avg:Calculation_2722217450909696:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PostalCode]' derivation='None' name='[none:PostalCode:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[PropertySubType]' derivation='None' name='[none:PropertySubType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year_month]' derivation='Month-Trunc' name='[tmn:year_month:qk]' pivot='key' type='quantitative' />
+            <column caption='Year Month' datatype='date' datatype-customized='true' name='[year_month]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]</column>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]' value='57' />
+            <format attr='title' class='0' field='[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]' scope='cols' value='Month' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.123jn6819u3ms1189rogb0yfjg55].[avg:Calculation_2722217450909696:qk]</rows>
+        <cols>[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]</cols>
+      </table>
+      <simple-id uuid='{C9495A81-BF2E-45CD-AB4A-FA8080B0125A}' />
+    </worksheet>
+    <worksheet name='Average days on market'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tahoma' fontsize='10'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listings_clean' name='federated.123jn6819u3ms1189rogb0yfjg55' />
+          </datasources>
+          <datasource-dependencies datasource='federated.123jn6819u3ms1189rogb0yfjg55'>
+            <column caption='Days On Market' datatype='integer' name='[DaysOnMarket]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+            <column-instance column='[DaysOnMarket]' derivation='Avg' name='[avg:DaysOnMarket:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PostalCode]' derivation='None' name='[none:PostalCode:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[PropertySubType]' derivation='None' name='[none:PropertySubType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year_month]' derivation='Month-Trunc' name='[tmn:year_month:qk]' pivot='key' type='quantitative' />
+            <column caption='Year Month' datatype='date' datatype-customized='true' name='[year_month]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]</column>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]' scope='cols' value='Month' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.123jn6819u3ms1189rogb0yfjg55].[avg:DaysOnMarket:qk]</rows>
+        <cols>[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]</cols>
+      </table>
+      <simple-id uuid='{3A1DA9CA-CC36-4853-BF9B-3B7CC8882F58}' />
+    </worksheet>
+    <worksheet name='Closed sales'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tahoma' fontsize='10'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listings_clean' name='federated.123jn6819u3ms1189rogb0yfjg55' />
+          </datasources>
+          <datasource-dependencies datasource='federated.123jn6819u3ms1189rogb0yfjg55'>
+            <column caption='Close Price' datatype='integer' name='[ClosePrice]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+            <column-instance column='[ClosePrice]' derivation='Count' name='[cnt:ClosePrice:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PostalCode]' derivation='None' name='[none:PostalCode:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[PropertySubType]' derivation='None' name='[none:PropertySubType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year_month]' derivation='Month-Trunc' name='[tmn:year_month:qk]' pivot='key' type='quantitative' />
+            <column caption='Year Month' datatype='date' datatype-customized='true' name='[year_month]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]</column>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]' scope='cols' value='Month' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.123jn6819u3ms1189rogb0yfjg55].[cnt:ClosePrice:qk]</rows>
+        <cols>[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]</cols>
+      </table>
+      <simple-id uuid='{AE846328-277F-49A7-87FA-1E803B5027F3}' />
+    </worksheet>
+    <worksheet name='Monthly median close price'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tahoma' fontsize='10'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listings_clean' name='federated.123jn6819u3ms1189rogb0yfjg55' />
+          </datasources>
+          <datasource-dependencies datasource='federated.123jn6819u3ms1189rogb0yfjg55'>
+            <column caption='Close Price' datatype='integer' name='[ClosePrice]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+            <column-instance column='[ClosePrice]' derivation='Median' name='[med:ClosePrice:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PostalCode]' derivation='None' name='[none:PostalCode:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[PropertySubType]' derivation='None' name='[none:PropertySubType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year_month]' derivation='Month-Trunc' name='[tmn:year_month:qk]' pivot='key' type='quantitative' />
+            <column caption='Year Month' datatype='date' datatype-customized='true' name='[year_month]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]</column>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]' scope='cols' value='Month' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='4' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='subtotal' value='solid' />
+            <format attr='border-width' data-class='subtotal' value='4' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]' value='Property Sub Type'>
+              <formatted-text>
+                <run fontname='Tahoma'>Property Sub Type</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]' value='Postal Code'>
+              <formatted-text>
+                <run fontname='Tahoma'>Postal Code</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.123jn6819u3ms1189rogb0yfjg55].[med:ClosePrice:qk]</rows>
+        <cols>[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]</cols>
+      </table>
+      <simple-id uuid='{A5607519-9F79-4612-B5A4-98F5DD0581CE}' />
+    </worksheet>
+    <worksheet name='New listings'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tahoma' fontsize='10'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listings_clean' name='federated.123jn6819u3ms1189rogb0yfjg55' />
+          </datasources>
+          <datasource-dependencies datasource='federated.123jn6819u3ms1189rogb0yfjg55'>
+            <column caption='SourceMonthYear' datatype='date' datatype-customized='true' name='[Calculation_2722217451593730]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATEPARSE ( &quot;yyyyMM&quot;, MID([source_file], 13, 6) )) ' />
+            </column>
+            <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2722217451593730]' derivation='Count' name='[cnt:Calculation_2722217451593730:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PostalCode]' derivation='None' name='[none:PostalCode:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[PropertySubType]' derivation='None' name='[none:PropertySubType:nk]' pivot='key' type='nominal' />
+            <column caption='Source File' datatype='string' name='[source_file]' role='dimension' type='nominal' />
+            <column-instance column='[year_month]' derivation='Month-Trunc' name='[tmn:year_month:qk]' pivot='key' type='quantitative' />
+            <column caption='Year Month' datatype='date' datatype-customized='true' name='[year_month]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]</column>
+            <column>[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]' scope='cols' value='Month' />
+            <encoding attr='space' class='0' field='[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]' field-type='quantitative' minor-origin='#2025-02-14 12:00:00#' minor-spacing='1.0' minor-units='months' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-markers-mode' value='all' />
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.123jn6819u3ms1189rogb0yfjg55].[cnt:Calculation_2722217451593730:qk]</rows>
+        <cols>[federated.123jn6819u3ms1189rogb0yfjg55].[tmn:year_month:qk]</cols>
+      </table>
+      <simple-id uuid='{ACB3A0B4-4E47-493C-AC40-BFD1F30D9ABA}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{71239966-6434-40E0-9384-F1E46DBDC7A7}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Market Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tahoma'>MLS Market Analysis </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='listings_clean' name='federated.123jn6819u3ms1189rogb0yfjg55' />
+      </datasources>
+      <datasource-dependencies datasource='federated.123jn6819u3ms1189rogb0yfjg55'>
+        <column aggregation='Sum' caption='Postal Code' datatype='integer' default-format='*00000' name='[PostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+        <column caption='Property Sub Type' datatype='string' name='[PropertySubType]' role='dimension' type='nominal' />
+        <column-instance column='[PostalCode]' derivation='None' name='[none:PostalCode:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[PropertySubType]' derivation='None' name='[none:PropertySubType:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98134' id='25' param='horz' type-v2='layout-flow' w='98770' x='615' y='933'>
+            <zone h='98134' id='21' param='vert' type-v2='layout-flow' w='98770' x='615' y='933'>
+              <zone h='4317' id='22' type-v2='title' w='98156' x='922' y='1400'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ddebf0' />
+                </zone-style>
+              </zone>
+              <zone h='92883' id='36' param='horz' type-v2='layout-flow' w='98156' x='922' y='5717' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+                <format attr='background-color' value='#ffffff' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='49592' id='37' param='horz' type-v2='layout-flow' w='76680' x='1186' y='48425'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <_.fcp.DashboardRoundedCorners.true...format attr='corner-radius' value='10' />
+            <format attr='background-color' value='#dfe7e8' />
+          </zone-style>
+        </zone>
+        <zone h='40257' id='12' param='horz' type-v2='layout-flow' w='97628' x='1186' y='6418'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <_.fcp.DashboardRoundedCorners.true...format attr='corner-radius' value='3' />
+            <format attr='background-color' value='#dfe7e8' />
+          </zone-style>
+        </zone>
+        <zone h='35006' id='7' name='Average close-to-original-list price ratio' w='31621' x='33992' y='8751'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='margin' value='10' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+        <zone h='35006' id='6' name='Average days on market' w='31621' x='65613' y='8751'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='margin' value='10' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+        <zone h='43757' id='8' name='Closed sales' w='36364' x='2372' y='51342'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='margin' value='0' />
+            <format attr='padding' value='0' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+        <zone h='43757' id='9' name='New listings' w='36364' x='40316' y='51342'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='margin' value='0' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+        <zone h='35006' id='23' name='Monthly median close price' w='31621' x='2372' y='8751'>
+          <layout-cache minwidth='170' type-h='fixed' type-w='scalable' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='margin' value='10' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+        <zone h='50175' id='40' param='vert' type-v2='layout-flow' w='20949' x='78261' y='47841'>
+          <zone forceUpdate='true' h='3617' id='41' type-v2='text' w='20795' x='78338' y='47958'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontname='Tahoma' fontsize='14'>Filters</run>
+              <run fontalignment='1'>Æ&#10;</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ddebf0' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <_.fcp.DashboardRoundedCorners.true...format attr='corner-radius' value='10' />
+            <format attr='background-color' value='#dfe7e8' />
+          </zone-style>
+        </zone>
+        <zone h='5834' id='26' mode='checkdropdown' name='Monthly median close price' param='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]' type-v2='filter' w='19368' x='79051' y='52509'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <_.fcp.DashboardRoundedCorners.true...format attr='corner-radius' value='3' />
+            <format attr='padding' value='2' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+        <zone h='37340' id='27' name='Monthly median close price' param='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]' type-v2='filter' w='19368' x='79051' y='58926'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <_.fcp.DashboardRoundedCorners.true...format attr='corner-radius' value='3' />
+            <format attr='margin' value='0' />
+            <format attr='padding' value='2' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontname='Tahoma'>MLS Market Analysis </run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='57' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98134' id='56' param='vert' type-v2='layout-flow' w='98736' x='632' y='933'>
+                <zone h='4317' id='22' type-v2='title' w='98104' x='948' y='1400'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone h='5834' id='26' mode='checkdropdown' name='Monthly median close price' param='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]' type-v2='filter' w='19368' x='79051' y='52509'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <_.fcp.DashboardRoundedCorners.true...format attr='corner-radius' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone h='37340' id='27' mode='checkdropdown' name='Monthly median close price' param='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]' type-v2='filter' w='19368' x='79051' y='58926'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <_.fcp.DashboardRoundedCorners.true...format attr='corner-radius' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='256' h='35006' id='23' is-fixed='true' name='Monthly median close price' w='31621' x='2372' y='8751'>
+                  <layout-cache minwidth='170' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='256' h='35006' id='7' is-fixed='true' name='Average close-to-original-list price ratio' w='31621' x='33992' y='8751'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='256' h='35006' id='6' is-fixed='true' name='Average days on market' w='31621' x='65613' y='8751'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3617' id='41' type-v2='text' w='20791' x='78340' y='47958'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tahoma' fontsize='14'>Filters</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43757' id='8' is-fixed='true' name='Closed sales' w='36364' x='2372' y='51342'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43757' id='9' is-fixed='true' name='New listings' w='36364' x='40316' y='51342'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{81A51FBC-E5DF-48B0-AF0A-7F4AB28EC66D}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Monthly median close price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PostalCode:ok]' type='filter' />
+            <card param='[federated.123jn6819u3ms1189rogb0yfjg55].[none:PropertySubType:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6A753F77-FDE0-4691-BA64-4E572A27B330}' />
+    </window>
+    <window class='worksheet' name='Average days on market'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{10FECDE7-6D92-47F7-BC13-608EA62857A9}' />
+    </window>
+    <window class='worksheet' name='Average close-to-original-list price ratio'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A7231A18-49D0-425D-AD50-499DE9775F6A}' />
+    </window>
+    <window class='worksheet' name='New listings'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{270B8EEE-B8B0-412F-8148-8F0B64B74678}' />
+    </window>
+    <window class='worksheet' name='Closed sales'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3634383B-9AE2-4B0D-87B5-26D85EA8AEE9}' />
+    </window>
+    <window class='dashboard' name='Market Analysis'>
+      <viewpoints>
+        <viewpoint name='Average close-to-original-list price ratio'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average days on market'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Closed sales'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Monthly median close price'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='New listings'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='27' />
+      <simple-id uuid='{500EADA4-E9EF-4241-91E1-87736BBFBDAC}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6BC668D3-6E30-4363-BA9E-4F31C1D78B29}' />
+    </window>
+  </windows>
+</workbook>

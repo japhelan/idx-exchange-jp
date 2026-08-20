@@ -25,7 +25,11 @@ def read_mls_dir(input_dir: Path, filter: str) -> pd.DataFrame:
     for file in input_dir.iterdir():
         if file.suffix == ".csv":
             if filter is None or filter in file.name:
-                df_list.append(pd.read_csv(file, low_memory=False))
+                temp_df = pd.read_csv(file, low_memory=False)
+                temp_df["source_file"] = (
+                    file.name
+                )  # Add a new column with the source file name
+                df_list.append(temp_df)
     print(f"Read {len(df_list)} files from {input_dir} with filter '{filter}'")
     print("\n")
 

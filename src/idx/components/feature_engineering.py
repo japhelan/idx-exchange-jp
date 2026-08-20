@@ -185,7 +185,7 @@ class NullDropper(BaseEstimator, TransformerMixin):
             subset=["Latitude", "Longitude", "OriginalListPrice", "ClosePrice"]
         )
         listings_df = listings_df.dropna(
-            subset=["Latitude", "Longitude", "OriginalListPrice", "ClosePrice"]
+            subset=["Latitude", "Longitude", "OriginalListPrice"]
         )
         if self.verbose:
             print(
