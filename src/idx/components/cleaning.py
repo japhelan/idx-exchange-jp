@@ -1,5 +1,6 @@
 """pipeline components for data cleaning"""
 
+import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 from pathlib import Path
@@ -97,5 +98,47 @@ class OutlierRemover(BaseEstimator, TransformerMixin):
                 f"Removed IQR outliers (range={self.multiplier}*IQR) in columns: {self.subset}. Post-remove shapes: sold_df: {sold_df.shape}, listings_df: {listings_df.shape}"
             )
             print("\n")
+
+        return sold_df, listings_df
+
+
+class PriceCorrector(BaseEstimator, TransformerMixin):
+    """
+    Custom sklearn pipeline component for correcting prices in a DataFrame.
+    """
+
+    def __init__(self, verbose=True):
+        self.verbose = verbose
+
+    def fit(self, X=None, y=None):
+        return self
+
+    def transform(self, X):
+        sold_df, listings_df = X
+        if self.verbose:
+            print(
+                f"Checking for data errors in ratio between ClosePrice and OriginalListPrice."
+            )
+        sold_df["PriceRatio"] = sold_df["ClosePrice"] / sold_df["OriginalListPrice"]
+        listings_df["PriceRatio"] = (
+            listings_df["ClosePrice"] / listings_df["OriginalListPrice"]
+        )
+
+        mask = sold_df["PriceRatio"] > 5
+        if mask.any():
+            magnitude = np.round(np.log10(sold_df.loc[mask, "PriceRatio"]))
+            sold_df.loc[mask, "ClosePrice"] = sold_df.loc[mask, "ClosePrice"] / (
+                10**magnitude
+            )
+
+        mask = listings_df["PriceRatio"] > 5
+        if mask.any():
+            magnitude = np.round(np.log10(listings_df.loc[mask, "PriceRatio"]))
+            listings_df.loc[mask, "ClosePrice"] = listings_df.loc[
+                mask, "ClosePrice"
+            ] / (10**magnitude)
+
+        if self.verbose:
+            print("Price correction complete.\n")
 
         return sold_df, listings_df

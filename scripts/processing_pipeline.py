@@ -28,6 +28,7 @@ iqr_flagger = cleaning.OutlierFlagger(
 iqr_dropper = cleaning.OutlierRemover(
     subset=["OriginalListPrice", "LivingArea", "LotSizeArea"]
 )
+price_corrector = cleaning.PriceCorrector()
 
 
 flagging_pipeline = Pipeline(
@@ -40,6 +41,7 @@ flagging_pipeline = Pipeline(
         ("cleanup", cleanup),
         ("null", null),
         ("dist_merger", dist_merger),
+        ("price_corrector", price_corrector),
         ("iqr_flagger", iqr_flagger),
     ]
 )
@@ -53,6 +55,7 @@ dropping_pipeline = Pipeline(
         ("cleanup", cleanup),
         ("null", null),
         ("dist_merger", dist_merger),
+        ("price_corrector", price_corrector),
         ("iqr_flagger", iqr_flagger),
         ("iqr_dropper", iqr_dropper),
     ]
