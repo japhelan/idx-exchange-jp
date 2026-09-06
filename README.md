@@ -4,6 +4,7 @@ This repository features all work that I have done during the IDX Exchange Summe
 
 Python package code lives under `src/idx`. Install it from the repository root with `pip install -e .`.
 
-# Dashboards
+## Resources
 
-This dataset was used to create analytical dashboards in Tableau; they can be found [here](https://public.tableau.com/app/profile/jack.phelan7762/vizzes).
+- This dataset was used to create analytical dashboards in Tableau; they can be found [here](https://public.tableau.com/app/profile/jack.phelan7762/vizzes).
+- the report directory contains a written summary of analysis and key takeaways.
